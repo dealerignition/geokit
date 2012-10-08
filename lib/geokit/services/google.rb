@@ -88,7 +88,7 @@ module Geokit
         elsif doc.elements['//kml/Response/Status/code'].text == '620'
           raise Geokit::TooManyQueriesError
         else
-          logger.info "Google was unable to geocode address: "+address
+          logger.debug "Google was unable to geocode address: "+address
           return GeoLoc.new
         end
 
