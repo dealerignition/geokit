@@ -96,7 +96,7 @@ module Geokit
         # re-raise because of other rescue
         raise Geokit::TooManyQueriesError, "Google returned a 620 status, too many queries. The given key has gone over the requests limit in the 24 hour period or has submitted too many requests in too short a period of time. If you're sending multiple requests in parallel or in a tight loop, use a timer or pause in your code to make sure you don't send the requests too quickly."
       rescue
-        logger.error "Caught an error during Google geocoding call: "+$!
+        logger.debug "Caught an error during Google geocoding call: "+$!
         return GeoLoc.new
       end
 
