@@ -40,10 +40,6 @@ module Geokit
           logger.info "geocoder.us was unable to geocode address: "+address
           return GeoLoc.new
         end
-        rescue
-          logger.error "Caught an error during geocoder.us geocoding call: "+$!
-          return GeoLoc.new
-
       end
     end
  end
