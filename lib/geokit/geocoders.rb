@@ -46,7 +46,7 @@ module Geokit
     @@geocoder_us = false
     @@geocoder_ca = false
     @@geonames = false
-    @@provider_order = [:google,:us]
+    @@provider_order = [:us]
     @@ip_provider_order = [:geo_plugin,:ip]
     @@logger=Logger.new(STDOUT)
     @@logger.level=Logger::INFO
